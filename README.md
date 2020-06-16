@@ -7,7 +7,7 @@ The git consist of Machine Learning Algorithm sample programs including Supervis
   5.Regularization - Ridge,Lasso and ElasticNet
   6.KNN imputer
   7.Natural Language Processing
-  8. ML Pipelines
+  8.ML Pipelines
   9.Exploratory Data Analysis
   
 All the data used for the programming are kept in data directory
