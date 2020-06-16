@@ -1,5 +1,5 @@
 About Notebooks
-The git consist of Machine Learning Algorithm sample programs including Supervised and Unsupervised learning such as \n
+The git consist of Machine Learning Algorithm sample programs including Supervised and Unsupervised learning such as
   1.Linear Regression
   2.Random Forest Regression
   3.Random Forest Classification
