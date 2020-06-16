@@ -1,0 +1,83 @@
+Logistic Regression
+
+This is a classification model- implemented on top of Liner Regression.
+
+For regression - traget variable is continuous - salary,price etc.
+
+
+Cancer Detection models
+
+Tumors can be 2 types - benign and malignant.
+
+Benign - 0 
+Malignant - 1
+
+Linear regression will not work in this situation.
+
+This red line will predict a value. 
+This value can be transormed into categorical by apllying a mathematical function over linear regression.
+
+(Y=MX+C) Applying SIGMOID FUNCTION
+
+What is Sigmoid Fucntion 
+
+sigmoid function of x -> f(x)=1/(1+e^-x)
+
+
+0<f(x)<1
+
+
+f(0)=1/(1+e^0) = 1/(1+1) = 0.5
+
+f(inf) = 1/(1+e^-inf) = 1/1 = 1
+
+f(-inf) = 1/(1+e^inf) = 1/inf = 0
+
+The distribution of Sigmoid function will be a S-curved function.
+
+In General
+If  f(x)>=0.5 DV =1
+If  f(x)<0.5  DV =0
+
+
+
+Linear Regression		Logistic Regression  (based on linear regression)
+
+Y=mx+c				y=sigmoid(mx+c)
+				y=1/(1+e^-mx-c)
+
+Continuous 			Discreet/Probability funciton / ranges from 0 to 1
+
+
+For every linear regression , a logistic regression is possible 
+and hence infite number of solution is possible for same dataset.
+ 
+
+Confussion Matrix  - No of correct prediciton and wrong prediction
+
+True Positive(1)  - Actual +ve Predicted +ve
+False Positive(1) - Actual -ve Predicted +ve	
+True Negative(0)  - Actual -ve Predicted -ve
+False Negative(0) - Actual +ve Predicted -ve
+
+
+Accuracy = Correct prediction/total prediciton 
+Accuracy = TP+TN/(TP+TN+FP+FN)
+
+					Actual
+				Positive	negative
+
+Predicted	Positive	2(TP)		1(FP)	
+	
+		Negative	3(FN)		5(TN)
+
+
+
+
+Assume that there are 3 classes - 3 binary cassificaiton
+
+A,B,C are 3 clases
+
+classification 1 - A or A' 
+classification 2 - B or B'
+classification 3 - C or C'

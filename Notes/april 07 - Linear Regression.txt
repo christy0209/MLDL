@@ -1,0 +1,103 @@
+Linear Regresison
+
+
+This is an example for regression algorithm 
+	mean our output wil be continous.
+
+Input variables	Output variable
+Independenant	Dependant
+
+The DV Y is continuous in nature..
+Examples for such Y - 
+
+	Salary
+	Height
+	Distane
+	Price
+	Time taken
+	Speed
+
+can u determine the salary of a person from his/her YoE,Age,Domain,Education? - this can be a machine lerning problem, supervised learning, regression
+
+You have all the placement history of luminar.
+So can you assume what salary you wil get once you got placed?
+
+we will be using the enitre data for training-- this will help us to know the all possible combinations.
+
+
+###Time Series Analysis - Statistical model used for time oriented data
+
+Linear Regression - Regression algorithm, the relationship btw X and Y wil be aways linear.
+
+
+What do you mean by linear relationship?
+
+	Change in Y wrto change in X will be linear in nature
+
+
+Do you remember the equation of a line?
+
+	Y= mX+C
+
+Y = mX+c
+
+Y is DV
+X is IV
+
+c- Y intercept of X
+m- slope of the line
+
+
+
+Age	Act.Salary ideal line	Red	actsal-Red	Yellow	actsal-Yellow	Green	actsal-green
+10	10000		10000	9000	1000		12000	-2000		10000	0
+15	16000		16000	15000	1000		16000	0		17500	-1500 (negative error)
+20	22000		22000	21000	1000		25000	-3000		20500	1500 (positive error)
+25	25000		25000	24500	500		22000	3000		27000	-2000
+30	32000		32000	30000	2000		36000	-4000		31000	1000
+
+NB:Dividing each value with 100 for easy calculation
+
+Total Error			55			-60			-10
+
+Total Squared Error		725			3800			950  min error is 725- Red.
+
+Total Mean Squared Error(MSE)	145			760			190 (total squared error/no of observations)
+ 
+Here the min error is -1000. and is this corret??
+not sure.
+a problem with this calculaton is, negative error and postive error got nullified.
+
+
+we are taking the square of errors.
+
+Red is the line with Minimum Squared Error. and hence considered as the best line for the data points.
+
+Next Step :
+Calculate M and C of only line Red.
+
+Later Step:
+Predicting the value of Y for X using M and C - Ouptut of Linear Regression.
+
+
+Sklearn - is the pakcage for ML
+LinearRegression Model - this model will identify the line with minimum error.
+
+
+Simple Linear Regression and Multi Linear Regression
+
+SLR- there is only one X and Y
+	Y=mX+C
+
+MLR - there will be multiple X and single Y
+	Y=m1X1+m2X2+......+mnXn+C
+
+
+
+
+
+
+
+
+
+

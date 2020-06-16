@@ -1,0 +1,72 @@
+Problem with considering only Accuracy - 
+Assume that there is a highly skewed dataset - Let it a cancer detection data.
+out of 1000 entires , only 5 entries are positive and 995 are negative.
+
+
+I am creating a model without using an ML algorithm, and blidnly predicting that the patient is free from cancer.
+What is my accuracy in this situation?
+TP=0
+FP=0 because i never predict any positives.
+TN=995
+FN=5
+
+Acuracy =  TP+TN/Total Observations = (0+995)/1000 = 99.5%
+
+But this model is not useful, i have to check for the correctness of prediction of Positives,
+
+Precision and Recall should be considerd.
+
+Precision = True Positive / Positives = TP/(TP+FP) what is the percentage of TP in positive prediction.
+	Precision = TP/(TP+FP) = 0/0 = Not Defined
+
+Recall / Sensitivity = True Positive/Actual Positives = TP/(TP+FN) -True Positive Rate 
+	Recall = TP/(TP+FN) = 0/5 = 0
+
+Specificity =  True Negative / Actual Negatives = TN/ TN+FP
+	Specificity = TN /(TN+FP) = 995/995 = 1
+
+False Positive Rate = 1-Specificity 
+	FPR = 1-1 = 0
+
+Sensitivity (SN) is calculated as the number of correct positive predictions divided by the total number of actual positives. It is also called recall (REC) or true positive rate (TPR). The best sensitivity is 1.0, whereas the worst is 0.0.
+
+Specificity (SP) is calculated as the number of correct negative predictions divided by the total number of actual negatives. It is also called true negative rate (TNR). The best specificity is 1.0, whereas the worst is 0.0.
+
+Precision (PREC) is calculated as the number of correct positive predictions divided by the total number of positive predictions. It is also called positive predictive value (PPV). The best precision is 1.0, whereas the worst is 0.0.
+
+False positive rate (FPR) is calculated as the number of incorrect positive predictions divided by the total number of negatives. The best false positive rate is 0.0 whereas the worst is 1.0. It can also be calculated as 1 – specificity.
+
+F1Score - F1Score is the Harmonic Mean of Precision and Recall
+F1 SCore = 2*P*R/(P+R)
+	F1Score = Not Defined/Infinity
+
+An Examples
+
+TP = 70
+FP = 10
+TN=900
+FN=20
+Accracy = 970/1000 = 97%
+Precision = TP/(TP+FP) = 70/(70+10) = 87.5%  
+Recall = TP/(TP+FN) = 70/(70+20) = 77.77%
+F1Score= 1.36/1.65 = 82.42 %
+
+
+which is more acceptable for us - 
+less number of FP or FN ?
+If its a cancer detection - FP are acceptable but not FN. we need a high Recall value.
+
+ideal situation 
+FP=FN=0
+
+Precision = Recall = 1 ==> F1Score = 1 
+
+
+AUC(Area Under Curve) - ROC(receiver operating characteristic) curve is a performance measurement for classification problem at various thresholds settings. ROC is a probability curve and AUC represents degree or measure of separability. It tells how much model is capable of distinguishing between classes. Higher the AUC, better the model is at predicting 0s as 0s and 1s as 1s. By analogy, Higher the AUC, better the model is at distinguishing between patients with disease and no disease.
+
+Y - True Positive Rate  - Recall for Positive (TP/TP+FN)
+X - False Positive Rate  - 1 – specificity (FP/ TN+FP)
+
+
+
+

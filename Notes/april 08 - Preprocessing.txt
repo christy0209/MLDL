@@ -1,0 +1,63 @@
+are we completed the preprocessing?
+
+removal of columns with most of the values are null
+missing vlaue handling
+outlier removal
+removal of columns with no correlation
+dummy varible creation
+
+-0.2 < corr < 0.2  the relationship is very weak. it is okay to avoid such columns.
+Categorical variable - you can check for the distribution-- if its uniformly distributed,
+that column can be avoided.
+
+
+
+after creating dummy variables, the preprocessing steps are done.
+
+we need to make the data ready for ML training..
+
+
+	Input variables		output variables/Target Variable
+	IV			DV			
+	X			y
+
+we need to split the dataframe (data) into X and y
+
+y - SalesPrice
+X - input featrues (data - salesprice)
+
+
+
+Right Now we have 2 dataframe, X and y
+
+And now we need to again split X and y for training and testing.
+
+
+We have X and y
+
+
+These X and y should be splitted for training and testing - say 2/3rd of the data can be used for training and 1/3 for testing.
+
+we have 1460 rows, say 900 rows will be used for training and remaining will be used for testing
+So the data for training shoud be randomnly selected. This will minimize if any bias present.
+
+
+Xtrain,ytrain - train_test_split function is used to split the data randomnly.
+Xtest,ytest
+
+What are steps in ML modelling?
+1.Idenify the algorithm
+2.Train (fit) the algorithm using training data
+3 Evaluate(test) the agorithm using testing data
+4.Calculate the evaluation matrix
+
+
+S1- Since saleprice is coninuous in nature - Regression algorithms should be used, and hence we choose LinearRegression
+S2- Training of LR model using the training data - Xtrain,ytrain
+S3- Trained model is evaluated using testing data - Xtest,ytest
+S4- Calculate the evalution matrix - MSE,R^2 values for a regression model.
+
+We have a Python API(package) Sklearn for ML functionalities.
+
+
+y= m1x1+m2x2+......+m277x277+c

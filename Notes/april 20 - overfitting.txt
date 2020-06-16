@@ -1,0 +1,57 @@
+Reasons for Overfitting
+
+Overfitting happens when a model learns the detail and noise in the training data to the extent that it negatively impacts the performance of the model on new data. This means that the noise or random fluctuations in the training data is picked up and learned as concepts by the model. The problem is that these concepts do not apply to new data and negatively impact the models ability to generalize.
+
+Data level techniqiues for prevnet overfitting
+Cross Validation  - (k-fold cross-validation)
+- assume that the data will be splitted into k chunks, say 10chunks.
+The model will be trained in 10 iterations using 9 chunks for training and remaining 1 for testing.
+S1- training 1-9 evaluation 10
+S2 - training 2-10 evaluation 1
+S3 - training 3-10,1  evaluation 2
+s10 - training 1-8,10 evaluation 9
+
+algorithm based techniques
+
+1.Regularization - Ridge,Lasso,ElasticNet  used with linear models.
+2.Ensemble Modelling - Bagging(RF),Boosting(XG boost,Ada)
+
+
+What is Regularization - Regularization is a technique used for tuning the function by adding an additional penalty term in the error function.
+	tuning  of function means minimizing the error and optimize m,c.
+
+we already have coefficients in linear regression - m1,m2,m3- SE = [y-(m1x1+m2x2+m3x3+c)]^2
+along with this we will add one more term - penality term.
+
+Ridge Regression - we will add the square of coefficients as penalty - this wil shrink the weightage of each feature.
+assume we have simple LR
+in normal LR 
+	Y = m1x1+m2x2+m3x3+c
+	SE = [y-(m1x1+m2x2+m3x3+c)]^2
+	We are introducing one more term - penality
+	SE =  [y-(m1x1+m2x2+m3x3+c)]^2 + L2*[m1^2+m2^2+m3^3]   L2- regularization factor/tuning parameter
+
+	optimum value for m and c will change - you will get more accurate coefficents.
+
+Lasso Regression
+	instead of sqaure of coeff as penality, absolute value of coeff is added a penality
+
+	Y = m1x1+m2x2+m3x3+c
+	SE = [y-(m1x1+m2x2+m3x3+c)]^2
+	We are introducing one more term - penality
+	SE =  [y-(m1x1+m2x2+m3x3+c)]^2 + L1*[|m1|+|m2|+|m3|]   L1- regularization factor/tuning parameter
+
+Elastic Net  - combination of Ridge and Lasso
+	SE =  [y-(m1x1+m2x2+m3x3+c)]^2 + L1*[|m1|+|m2|+|m3|] +L2*[m1^2+m2^2+m3^3]
+	
+
+Lambda = 0 , no regularization simple LR or Logistic Regression.
+Lambda = infinity , The impact of the shrinkage penalty grows, and the ridge/lasso regression coe?cient estimates will approach zero
+
+	0<Lambda<infinity
+
+
+What does Regularization achieve?  fundamentally regularization reduces variance
+A standard least squares model tends to have some variance in it, i.e. this model won’t generalize well for a data set different than its training data. Regularization, significantly reduces the variance of the model, without substantial increase in its bias. So the tuning parameter ?, used in the regularization techniques described above, controls the impact on bias and variance. As the value of ? rises, it reduces the value of coefficients and thus reducing the variance. Till a point, this increase in ? is beneficial as it is only reducing the variance(hence avoiding overfitting), without loosing any important properties in the data. But after certain value, the model starts loosing important properties, giving rise to bias in the model and thus underfitting. Therefore, the value of ? should be carefully selected.
+
+

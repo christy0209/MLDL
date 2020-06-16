@@ -1,0 +1,8 @@
+Satruday Project Final Review
+
+- Jupyter Notebook - with proper comments
+- One pager summary 
+	Problem statement
+	Approach(preprocessing,cleansing, anything else)
+	Algorithms and performance
+	Final Result

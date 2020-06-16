@@ -1,0 +1,45 @@
+Algorithm level techniques to avoid overfitting
+	Regularization - used for linear models
+	Ensemeble modelling - non linear models
+
+What is Regularization - Regularization is a technique used for tuning the function by adding an additional penalty term in the error function.
+	tuning  of function means minimizing the error and optimize m,c.
+
+we already have coefficients in linear regression - m1,m2,m3- 
+SE = sum([y-(m1x1+m2x2+m3x3+c)]^2)
+
+along with this we will add one more term - penality term.
+
+Ridge Regression - we will add the square of coefficients as penalty - this wil shrink the weightage of each feature.
+assume we have simple LR
+in normal LR 
+	Y = m1x1+m2x2+m3x3+c
+	SE = [y-(m1x1+m2x2+m3x3+c)]^2
+	We are introducing one more term - penality
+	SE =  [y-(m1x1+m2x2+m3x3+c)]^2 + L2*[m1^2+m2^2+m3^3]   L2- regularization factor/tuning parameter
+
+	optimum value for m and c will change - you will get more accurate coefficents.
+
+Lasso Regression
+	instead of sqaure of coeff as penality, absolute value of coeff is added a penality
+	Lasso can remove a feature by setting the coeeffiicient into 0
+
+	Y = m1x1+m2x2+m3x3+c
+	SE = [y-(m1x1+m2x2+m3x3+c)]^2
+	We are introducing one more term - penality
+	SE =  [y-(m1x1+m2x2+m3x3+c)]^2 + L1*[|m1|+|m2|+|m3|]   L1- regularization factor/tuning parameter
+
+Elastic Net  - combination of Ridge and Lasso
+	SE =  [y-(m1x1+m2x2+m3x3+c)]^2 + L1*[|m1|+|m2|+|m3|] +L2*[m1^2+m2^2+m3^3]
+
+Advanatages of Regularization
+
+Prevents Overfitting: A high-dimensional dataset having too many features can sometimes lead to overfitting (model captures both real and random effects).
+
+Simplicity: An over-complex model having too many features can be hard to interpret especially when features are correlated with each other.
+
+Computational Efficiency: A model trained on a lower dimensional dataset is computationally efficient (execution of algorithm requires less computational time).
+
+Regularization leads to dimensionality reduction, which means the machine learning model is built using a lower dimensional dataset. This generally leads to a high bias errror(under fitting)
+
+

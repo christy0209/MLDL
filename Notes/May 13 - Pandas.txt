@@ -1,0 +1,65 @@
+Pandas - PanalData
+This python package is used for data wrangling, data transformation and data preprocessing.
+
+install pandas
+	pip install pandas (Latest Stable Version)
+
+import pandas
+	import pandas as pd (here pd is the alias for pandas, later onwards pd can be used instead of pandas)
+
+
+Different datatypes in pandas
+	-Series - 1D data
+	-DataFrame - 2D data - this is the most common datatype
+	-Panel - 3D data
+
+it comes with index.
+Few fucntions from pandas
+head(n) - display first n rows
+tail(n) - display last n rows
+describe() - summary of the dataframe
+
+Stat functions
+min()
+max()
+mean()
+median()
+mode()
+std()
+
+Parameters - for calling parameters () is not required
+dtypes - will show the datatype of each column
+	float64 - float values
+	int64 - int values
+	object - catagorical and string values
+shape - will show the #rows and #columns
+
+All these functions/parameters are essential to understand the data.
+
+
+There can be many flaws within the data.
+1.Pressence of missing data
+2.Pressence of outlier values
+
+What is missing data - in some of the obsevations a few features are not available.
+how to identify the pressence of missing data?
+
+isna()  - checking for missing value
+isnull() - checking for null value
+isnan() - checking for not a number data
+
+Usually missing value cause an abscence of information in the cell.
+But in some datasets, missing values can be filled with some random data(?,*,#) - this information should pass from the client side.
+
+Missing Value handling 
+	This is an important stage in preprocessing.
+	There should be no missing data/null data in the dataset used for modelling
+	1 - Removal of column
+	2 - Removal of Row
+`	3 - Replacing missing value with a suitable data
+
+Option 1 and 2 can cause loss of data, so not advised
+Best option in replacing the missing value with a suitable data.
+	Replacement with Mean - for numerical data
+	Replacement with Medain - for numerical data
+	Replcement with Mode - for object data(categorical data)

@@ -1,0 +1,41 @@
+Linear Regresison
+
+
+This is an example for regression algorithm 
+	mean our output wil be continous.
+
+Input variables	Output variable
+Independenant	Dependant
+
+The DV Y is continuous in nature..
+Examples for such Y - 
+
+	Salary
+	Height
+	Distane
+	Price
+	Time taken
+	Speed
+
+can u determine the salary of a person from his/her YoE,Age,Domain,Education? - this can be a machine lerning problem, supervised learning, regression
+
+You have all the placement history of luminar.
+So can you assume what salary you wil get once you got placed?
+
+
+How Linear Regression works?
+
+Linear regression woks based on the equation of a line.
+	Y=mX+c
+	Y - dependent variable
+	X - independent variable
+	m - slope
+	c -y intercept
+
+multiple linear regresion
+calculate salary wrto YoE(x1), Age(x2), Domain(x3), Education(x4)
+salary(y)
+
+	y = (m1x1+c1) + (m2x2+c2) + (m3x3+c3) + (m4x4+c4)
+	y = m1x1 + m2x2 + m3x3 + m4x4 +.....+mnxn + C
+	y = sigma(miXi)+C
