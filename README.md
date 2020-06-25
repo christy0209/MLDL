@@ -1,16 +1,33 @@
-About Notebooks
-The git consist of Machine Learning Algorithm sample programs including Supervised and Unsupervised learning such as
-  1.Linear Regression
-  2.Random Forest Regression
-  3.Random Forest Classification
-  4.Kmeans Clustering
-  5.Regularization - Ridge,Lasso and ElasticNet
-  6.KNN imputer
-  7.Natural Language Processing
-  8.ML Pipelines
-  9.Exploratory Data Analysis
-  
-All the data used for the programming are kept in data directory
+Data Science Prgrams
+---------------------
 
-About Notes
-Classroom notes for each and every topic are added to the directory called Notes.
+ * Machine Learning
+ * Deep Learning
+
+
+
+About the Repository
+------------
+The repository consist of 25+ sample ML and DL programs and explanation of algorithms.
+
+Machine Learning
+------------
+ * 01 - Preprocessing and EDA
+ * 02 - Linear Models
+ * 03 - Ensemble Models
+ * 04 - Clustering
+ * 05 - Dimensionality Reduction
+ * 06 - NLP
+ * 07 - SVM
+ * 08 - KNN
+ * 09 - Naive Bayes
+ * 10 - ML Pipelines
+ 
+
+
+MAINTAINERS
+-----------
+
+ * Christy Abraham Joy - https://www.linkedin.com/in/christy-abraham-joy/
+
+
