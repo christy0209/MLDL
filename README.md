@@ -1,14 +1,14 @@
-Data Science Prgrams
+Data Science Programs
 ---------------------
 
  * Machine Learning
  * Deep Learning
-
-
-
+ 
+ 
 About the Repository
 ------------
 The repository consist of 25+ sample ML and DL programs and explanation of algorithms.
+
 
 Machine Learning
 ------------
@@ -23,8 +23,6 @@ Machine Learning
  * 09 - Naive Bayes
  * 10 - ML Pipelines
  
-
-
 MAINTAINERS
 -----------
 
