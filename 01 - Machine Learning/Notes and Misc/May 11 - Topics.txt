@@ -1,0 +1,45 @@
+Topics - Python and Machine Learning
+1.Jupyter Notebook
+2.pandas and numpy
+3.EDA- exploratory data analytics
+4.Preprocessing and Data Cleansing
+5.Introduction to ML
+6.Supervised learning models - around 12 algorithms are in the scope
+	Classification
+		Logisitic Regression
+		Random Forest Classfier
+		SVM(Support Vector Machine)
+		KNN(K nearest Neighbours)
+		Naive Bayes
+	Regression
+		Linear Regression(Ridge/Lasso/ElasticNet)
+		Random Forest Regressor
+		XG Boost
+7.Unsupervised Learning Models
+	Clustering
+		KMeans
+		Heirarchical clustering,DBSCAN(not in our syllabus)
+	Dimensionalty Reduction
+		Principal Component Analysis(PCA)
+8.Recomendation System
+9.Natural Language Processing (NLTK)
+10.Individual Project
+
+Duration : 45 hours - 30 days(daily 1.5 hours)
+
+
+pip
+https://pip.pypa.io/en/stable/installing/
+
+1.curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+2.python get-pip.py / python3 get-pip.py
+
+jupyter
+https://jupyter.org/install
+
+1.pip install notebook
+2.jupyter notebook
+
+alternative
+1.sudo apt install jupyter-notebook
+2.jupyter-notebook

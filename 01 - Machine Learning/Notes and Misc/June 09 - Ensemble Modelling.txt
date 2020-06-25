@@ -1,0 +1,119 @@
+Ensemble Modelling
+
+Ensemble modeling is a process where multiple diverse base models are used to predict an outcome. 
+Example for a base model - Decision Tree
+
+Fruit	shape	size	taste
+Apple	round	medium	sweet
+Orange	round	medium	sour
+grape	round	small	sweet
+
+
+is size small?
+Yes - Grape
+No - Orange or Apple
+
+is taste Sweet?
+Yes - Apple 
+No - Orange
+
+Ensemble Models are 2 types
+1.Bagging
+2.Boosting
+
+Bagging Algorithms - Bagging is a paralellel way of ensembling.-
+Objective - The objective is to create several subsets of data from training sample chosen randomly with replacement. Each collection of subset data is used to train their decision trees.
+
+Bagging Steps:
+
+	1.Suppose there are N observations and M features in training data set. A sample from training data set is taken randomly with replacement.
+	2.A subset of M features are selected randomly and whichever feature gives the best split is used to split the node iteratively.
+	3.Above steps are repeated n times and prediction is given based on the aggregation of predictions from n number of trees.
+
+Advantages:
+
+	1.Reduces over-fitting of the model - [we dont use entire features together]
+	2.Handles higher dimensionality data very well -[we dont use entire features together]	
+	3.Maintains accuracy for missing data.
+
+
+
+
+Boosting -In this technique, learners are learned sequentially with early learners fitting simple models to the data and then analysing data for errors. Consecutive trees (random sample) are fit and at every step, the goal is to improve the accuracy from the prior tree.
+
+Random Forest ? 
+
+Random Forest - Random forest, like its name implies, consists of a large number of individual decision trees that operate as an ensemble. Each individual tree in the random forest spits out a class prediction and the class with the most votes becomes our model’s prediction.
+
+
+How to create a decision tree? How to decide on Root Node and Decision Nodes?
+
+
+Grade		Bumpiness		Speed Limit		Speed(op class)
+steep		bumpiness		yes			slow
+steep		smooth			yes			slow
+flat		bumpiness		no			fast
+steep		smooth			no			fast
+
+
+Entropy and Information Gain (IG)
+
+
+What is Entropy - How the nodes in decision trees are decided..
+
+Entropy is the measures of disorder or uncertainty in a bunch of examples.
+
+Entropy controls how a Decision Tree decides to split the data. It actually effects how a Decision Tree draws its boundaries.
+
+Entropy = - Sigma[Pi*log2(Pi)]  = -(P1logP1+P2logP2+........+PnlogPn)
+
+Information gain (IG) measures how much “information” a feature gives us about the class.
+IG is the main key that is used by Decision Tree Algorithms to construct a Decision Tree.
+Decision Trees algorithm will always tries to maximize Information gain.
+An attribute with highest Information gain will tested/split first.
+
+IG=Entropy(parent) - (weights average)*Entropy(children)
+
+
+Grade		Bumpiness		Speed Limit		Speed(op class)
+steep		bumpiness		yes			slow
+steep		smooth			yes			slow
+flat		bumpiness		no			fast
+steep		smooth			no			fast
+
+Entropy
+Parent Class - Output Class
+P1 = P(slow) = 2/4 = 0.5
+P2 = P(fast) =  2/4 = 0.5
+Entropy = -(P1logP1+P2logP2)   (log to the base 2)
+Entropy of Parent Class = -(.5*log.5+.5*log.5) = 1
+
+
+
+Grade		class	count	slow	fast	Entropy			Weight Average
+Left Hand		steep	3	2	1	-(2/3log2/3+1/3log1/3) = 0.9	3/4
+Right Hand	flat	1	0	1	-(1log1) = 0		1/4
+weighted average * Entropy(children) 	= 	3/4*0.9+1/4*0 = 0.675
+IG(Grade) = 1-0.675 = 0.325
+
+
+SpeedLimit	class	count	slow	fast	Entropy			Weight Average
+Left Hand		yes	2	2	0	-(2/2log2/2) = 0		2/4
+Right Hand	no	2	0	2	-(2/2log2/2) = 0		2/4
+weighted average * Entropy(SpeedLimit) 	= 	2/4*0+2/4*0 = 0
+IG(SpeedLimit) = 1-0 = 1
+
+Bumpiness	class		count	slow	fast	Entropy			Weight Average
+Left Hand		bumpiness	2	1	1	-2*(1/2log1/2) = 1		2/4
+Right Hand	smooth		2	1	1i	-2*(1/2log1/2) = 1		2/4
+weighted average * Entropy(Bumpiness) 	= 	2/4*1+2/4*1 = 1
+IG(Bumpiness) = 1-1 = 0
+
+As we know that, Decision Tree Algorithm construct Decision Tree based on features that have highest Information gain.
+So, here we can see that SpeedLimit has highest Information gain.So root node will be SpeedLimit
+
+Gini Index - An alternative way to identify the decision tree structure
+
+Gini Index: It is calculated by subtracting the sum of squared probabilities of each class from ONE(1). It favors larger partitions and easy to implement whereas information gain favors smaller partitions with distinct values.
+Gini Index = 1 - sigma(Pi^2) 
+A feature with a lower Gini index is chosen for a split.

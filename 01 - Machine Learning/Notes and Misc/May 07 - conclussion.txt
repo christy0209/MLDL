@@ -1,0 +1,46 @@
+any doubts or clarrifications on any of the topic covered?
+	
+mean sqaured error will be very high.
+	low training error
+	high evaluation error
+this can be the situation for overfitting.
+
+
+computer vision - opencv
+features are too high.
+1920*1080*3
+
+Deep Learning 
+CNN - Convolutional Neural NW
+RNN - Reccurant Neural NW
+LSTM - Long Short Term Memory NW - speec recogintion,language converssion.
+
+For image procesing 
+	OpenCV
+	Deep Learning(Tensorflow,keras)
+
+
+
+1- Machine learning A-Z udemy
+2- Machine Learning - standford university - Coursera
+
+Deep Learning 
+1- Deep Learning A-Z udemy
+2-  Deep Learning - standford university - Coursera
+
+for comepetitions and hackathons
+https://www.analyticsvidhya.com/
+https://skillenza.com/
+
+for dataset
+https://www.kaggle.com/
+https://data.world/
+https://data.gov.in/
+https://archive.ics.uci.edu/ml/datasets.php
+
+important areas
+Banking
+Retail
+Ecommerce
+Healthcare
+industrial domains - oil and gas (predictive maintanance)

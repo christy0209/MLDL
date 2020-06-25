@@ -1,0 +1,69 @@
+How to handle missing values
+for categorical data - missing value can be replaced with the mode of the data.
+for continiuous data - missing value can be replaced with the mean or median.
+
+consider the following data
+1,3,4,5,6,7,5,4,2,5
+
+Mode - 5 [most frequent value - a dataset can have one or more mode.]
+Mean -  4.2   [ average of the data - a  dataset will have only one mean]
+Median -  4.5 [ Middle most vlaue of the data(50th %ile value) - a dataset will habe only one median]
+
+calculate median
+s1.sort the data - 1,2,3,4,4,5,5,5,6,7
+s2.choose the middle value
+s3. if the #datapoints are even take the mean of middle points  - mean(4,5) - 4.5
+
+dataframe
+-reading
+	read_csv
+	read_excel
+-accessing a column
+	df[''columnName'']
+-accessing a row	
+df.loc[0]
+-accessing a cell
+df.loc[0,''columnname'']
+df.iloc[0,1]
+
+
+few questions
+Super Market Sales Dataset
+Attribute information
+Invoice id: Computer generated sales slip invoice identification number
+Branch: Branch of supercenter (3 branches are available identified by A, B and C).
+City: Location of supercenters
+Customer type: Type of customers, recorded by Members for customers using member card and Normal for without member card.
+Gender: Gender type of customer
+Product line: General item categorization groups - Electronic accessories, Fashion accessories, Food and beverages, Health and beauty, Home and lifestyle, Sports and travel
+Unit price: Price of each product in $
+Quantity: Number of products purchased by customer
+Tax: 5% tax fee for customer buying
+Total: Total price including tax
+Date: Date of purchase (Record available from January 2019 to March 2019)
+Time: Purchase time (10am to 9pm)
+Payment: Payment used by customer for purchase (3 methods are available – Cash, Credit card and Ewallet)
+COGS: Cost of goods sold
+Gross margin percentage: Gross margin percentage
+Gross income: Gross income
+Rating: Customer stratification rating on their overall shopping experience (On a scale of 1 to 10)
+
+Usecases
+
+Total number of customers?
+Most visited branch?
+City vs customer analysis?
+Customer ratio based on customer type?
+Most sold product line? general analysis
+Costiest product in the shop?
+Total gross income?
+Total gross income per branch?
+Payment type analysis?
+rush hours?
+Total Margin?
+Total % of margin?
+convert the gross income into rupees for every invoice ID?
+
+whatever be the use case , we have to do some early analysis on data.
+to check data quality, data avaialability.
+

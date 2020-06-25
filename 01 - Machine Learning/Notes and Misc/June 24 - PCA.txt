@@ -1,0 +1,32 @@
+Dimensionality Reduction - Dimensionality reduction refers to techniques that reduce the number of input variables in a dataset.
+
+More input features often make a predictive modeling task more challenging to model, more generally referred to as the curse of dimensionality.
+
+The curse of dimensionality refers to various phenomena that arise when analyzing and organizing data in high-dimensional spaces that do not occur in low-dimensional settings.
+
+If we have more number of features, the modelling will be difficult - it can take more time and processing.
+There are 2 methods to solve this issue.
+1.Feature Elimination - we reduce the feature space by eliminating features.
+2.Feature Extraction - we extract the features into new defined features. in this method we are not loosing much information.
+
+
+Principal Component Analysis is used to remove the redundant features from the datasets without losing much information.These features are low dimensional in nature.The first component has the highest variance followed by second, third and so on.PCA works best on data set having 3 or higher dimensions. Because, with higher dimensions, it becomes increasingly difficult to make interpretations from the resultant cloud of data.
+
+PCA is an unsupervised algorithm.
+
+
+When should I use PCA?
+Do you want to reduce the number of variables, but aren’t able to identify variables to completely remove from consideration?
+Do you want to ensure your variables are independent of one another?
+Are you comfortable making your independent variables less interpretable?
+
+
+How does PCA work?
+1.We are going to calculate a matrix that summarizes how our variables all relate to one another.
+2.We’ll then break this matrix down into two separate components: direction and magnitude. We can then understand the “directions” of our data and its “magnitude”  (eigen values and eigen vectors)
+3.We will transform our original data to align with these important directions (which are combinations of our original variables)
+
+
+2D example
+First, consider a dataset in only two dimensions, like (height, weight). This dataset can be plotted as points in a plane. But if we want to tease out variation, PCA finds a new coordinate system in which every point has a new (x,y) value. The axes don't actually mean anything physical; they're combinations of height and weight called "principal components" that are chosen to give one axes lots of variation.
+

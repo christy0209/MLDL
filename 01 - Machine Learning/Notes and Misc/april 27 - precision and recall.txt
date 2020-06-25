@@ -1,0 +1,70 @@
+
+https://classeval.wordpress.com/introduction/basic-evaluation-measures/
+
+Problem with considering only Accuracy - 
+Assume that there is a highly skewed dataset - Let it a cancer detection data.
+out of 1000 entires , only 5 entries are positive and 995 are negative.
+
+
+I am creating a model without using an ML algorithm, and blidnly predicting that the patient is free from cancer.
+What is my accuracy in this situation?
+TP=0
+FP=0 because i never predict any positives.
+TN=995
+FN=5
+
+Acuracy =  TP+TN/Total Observations = (0+995)/1000 = 99.5%
+
+But this model is not useful, i have to check for the correctness of prediction of Positives,
+
+Precision and Recall should be considerd.
+
+Precision = True Positive / Actual Results = TP/(TP+FP) also known as True Positive Rate
+Recall = True Positive/Prediced Results = TP/(TP+FN)
+
+Precision = Infinity
+Recall = 0
+F1Score = 2PR/(P+R) = 0 
+
+
+
+TP = 70
+FP = 10
+TN=900
+FN=20
+Accracy = 970/1000 = 97%
+Precision = TP/(TP+FP) = 70/(70+10) = 87.5% - True Positive Rate 
+Recall = TP/(TP+FN) = 70/(70+20) = 77.77%
+F1Score= 1.36/1.65 = 82.42 %
+
+
+which is more acceptable for us - 
+less number of FP or FN ?
+If its a cancer detection - FP are acceptable but not FN. we need a high Recall value.
+
+TN = 1408
+FN = 289
+FP = 189
+TP = 439
+
+Accuracy = (TP+TN)/Total = 1847/2325 = 0.7944
+Precision = TP/(TP+FP) = 439/628 = 0.6990 
+Recall =  TP/(TP+FN) = 439/(728) =  0.6030
+F1Score = 2PR/(P+R) = 0.8430/1.302 = 0.6475
+Support - TP+FP = 628
+
+
+ideal situation 
+FP=FN=0
+
+Precision = Recall = 1 ==> F1Score = 1 
+
+
+AUC(Area Under Curve) - ROC(receiver operating characteristic) curve is a performance measurement for classification problem at various thresholds settings. ROC is a probability curve and AUC represents degree or measure of separability. It tells how much model is capable of distinguishing between classes. Higher the AUC, better the model is at predicting 0s as 0s and 1s as 1s. By analogy, Higher the AUC, better the model is at distinguishing between patients with disease and no disease.
+
+Y - True Positive Rate  - Recall for Positive (TP/TP+FN)
+X - True Negative Rate  - Recall for Negative (TN/TN+FP)
+
+
+
+

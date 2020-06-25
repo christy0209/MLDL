@@ -1,0 +1,41 @@
+Machine Learning Work Flow
+s1 - Problem and Data Idntification
+s2 - EDA and preprocessing
+s3 - Model selection and training
+s4 - Productionize/ hosting of the solution
+
+75% of the time is spend for EDA and preprocessing.
+
+EDA -Exploratory Data Analysis
+This is one of the most important steps in Data Analytics
+
+Exploratory Data Analysis (EDA) is an approach/philosophy for data analysis that employs a variety of techniques (mostly graphical) to
+
+maximize insight into a data set;
+uncover underlying structure;
+extract important variables;
+detect outliers and anomalies;
+
+for EDA we will be using Pandas,Matplotlib and Seaborn
+
+General outline for EDA
+1.Preview data - head(),tail(),describe(),info()
+2.Check total number of entries and column types -shape,dtypes
+3.Check any null values -isna() - identify the methods to remove/replace null values
+4.Check duplicate entries - duplicated(),drop_duplicate()
+5.Check outlier values - identify the methods to remove/replace outlier values
+6.Plot distribution of numeric data (univariate and pairwise joint distribution) - different graphs
+7.Plot count distribution of categorical data -histogram/boxplot
+8.Analyse time series of numeric data by daily, monthly and yearly frequencies - this is for timeseries data.
+
+Univariate analysis
+-histogram
+-boxplot
+Boxplots are a standardized way of displaying the distribution of data based on a five number summary (“minimum”, first quartile (Q1), median, third quartile (Q3), and “maximum”).
+
+Boxplot is used to identify the outlier values.
+
+Multivariate analysis
+Boxplot
+Lineplot
+Scatterplot

@@ -1,0 +1,43 @@
+What is Machine Learning?
+	- Allow the machines to learn from examples and experience
+`	- ## Machine learning algorithms use computational methods to “learn” information directly from data without relying on a predetermined equation as a model
+
+Apllication of Machine Learning?
+	- Google Assistant
+	- Robotics and chatbots
+	- Self driving cars
+	- targeted marketing
+	- Spam Emails
+	- Face Recognition (smartphones, laptops, facebook, google photos)
+	- Recommadation systems (Gmail, Amazon, Facebook,Youtube,Netflix,Spotify)
+	- Medical diagnosis(diagnosis from xrays, scans etc)
+	- Weather forecasting
+	- Match forecasting
+
+What is the common nature of the above usecases?
+	- Assisting/easening the tasks
+	- Pattern matching
+	- Predicting an unknown
+	- ## no predefined equations 
+	- ## Learning from historic data
+
+
+E : Experience(Data)
+T : Task
+P : Performance
+As Experience(E) incerases(data increases) the Performance(P) of the algorithm becomes better for same Task(T)
+
+
+for ML Programming
+	- Python (version 3.x)
+	- Pandas(PanalData) - used for data transformation and preprocessing
+	- Numpy(NumericalPython) - used for vector/matrix/mathematical operations
+	- Matplotlib/Seaborn - used for visualization
+	- Sci-kit Learn - Used for Machine Learning Algorithms,data preparation
+	- NLTK (Natural Language ToolKit) - Used for NLP	
+	- Notebook - Used for programming
+
+PIP can be used to install the above mentioned packages.
+
+You can use Jupyter Notebook or Collab
+https://colab.research.google.com/
