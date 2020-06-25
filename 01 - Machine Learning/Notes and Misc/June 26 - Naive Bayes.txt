@@ -1,0 +1,26 @@
+Naive Bayes classifiers are a collection of classification algorithms based on Bayes’ Theorem. It is not a single algorithm but a family of algorithms where all of them share a common principle, i.e. every pair of features being classified is independent of each other.
+
+The fundamental Naive Bayes assumption is that each feature makes an independent and equal contribution to the outcome.
+
+We assume that no pair of features are dependent
+Secondly, each feature is given the same weight(or importance). None of the attributes is irrelevant and assumed to be contributing equally to the outcome.
+
+Bayes’ Theorem finds the probability of an event occurring given the probability of another event that has already occurred
+
+where A and B are events and P(B) ? 
+
+Basically, we are trying to find probability of event A, given the event B is true. Event B is also termed as evidence.
+P(A) is the priori of A (the prior probability, i.e. Probability of event before evidence is seen). The evidence is an attribute value of an unknown instance(here, it is event B).
+P(A|B) is a posteriori probability of B, i.e. probability of event after evidence is seen.
+
+
+X = (Rainy, Hot, High, False)
+y = No
+
+So basically, P(y|X) here means, the probability of “Not playing golf” given that the weather conditions are “Rainy outlook”, “Temperature is hot”, “high humidity” and “no wind”.
+
+Now, its time to put a naive assumption to the Bayes’ theorem, which is, independence among the features. So now, we split evidence into the independent parts.
+
+
+
+
