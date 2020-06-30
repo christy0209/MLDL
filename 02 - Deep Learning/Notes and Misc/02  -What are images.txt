@@ -1,0 +1,36 @@
+What are images?
+
+VGA - 640   x 480 (width * height)
+HD - 1280 x 720
+FHD -  1920 x 1080
+4K - 3840 x 2160
+
+Types of Images
+
+
+Each layer of image is having 2^8 levels ie 256 layers from 0 to 255
+
+Binary(BW) - 2 levels - 0,255
+	0 - black
+	1- white
+
+Grey Scale - 256 level - 0-255
+	0 - black
+	1 - white	
+RGB - 3 layers
+	R : 0 - 255
+	G : 0 - 255
+`	B : 0 - 255
+
+What is Coputer Vision ?
+
+Computer vision is an interdisciplinary scientific field that deals with how computers can gain high-level understanding from digital images or videos. From the perspective of engineering, it seeks to understand and automate tasks that the human visual system can do.
+
+
+some definitions
+
+"Computer vision is the automated extraction of information from images. Information can mean anything from 3D models, camera position, object detection and recognition to grouping and searching image content."
+
+Package - opencv
+installation - pip install opencv-python
+loading - import cv2

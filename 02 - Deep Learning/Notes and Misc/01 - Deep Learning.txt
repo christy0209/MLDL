@@ -1,0 +1,15 @@
+Deep Learning ?
+
+Deep learning (also known as deep structured learning) is part of a broader family of machine learning methods based on artificial neural networks with representation learning. Learning can be supervised, semi-supervised or unsupervised.
+
+Artificial neural networks (ANNs) were inspired by information processing and distributed communication nodes in biological systems. ANNs have various differences from biological brains. Specifically, neural networks tend to be static and symbolic, while the biological brain of most living organisms is dynamic (plastic) and analog.
+
+Deep learning is a class of machine learning algorithms that uses multiple layers to progressively extract higher level features from the raw input. For example, in image processing, lower layers may identify edges, while higher layers may identify the concepts relevant to a human such as digits or letters or faces.
+
+Area of Interest
+Artificial Neural Network(ANN)
+Convolutional Neural Network(CNN)
+Reccurent Neural Network(RNN)
+Computer Vision(OpenCV)
+Optical Character Recognition(OCR)
+Text Analytics
