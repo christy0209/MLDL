@@ -1,0 +1,7 @@
+Face Detection Using OpenCV
+
+What are Haar Cascade ?
+Haar Cascade is a machine learning object detection algorithm used to identify objects in an image or video and based on the concept of ?? features proposed by Paul Viola and Michael Jones in their paper "Rapid Object Detection using a Boosted Cascade of Simple Features" in 2001.
+
+https://github.com/opencv/opencv/tree/master/data/haarcascades
+
