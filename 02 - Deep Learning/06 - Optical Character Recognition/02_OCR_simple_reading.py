@@ -20,7 +20,10 @@ def get_grayscale(image):
 def remove_noise(image):
     return cv2.medianBlur(image, 5)
 
-
+#thresholding
+    
+def threshold(image):
+    return cv2.threshold(image, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
 
 
 # template matching
@@ -29,6 +32,7 @@ def match_template(image, template):
 
 
 gray = get_grayscale(img)
+thresh = threshold(gray)
 noise = remove_noise(gray)
 
 
@@ -44,12 +48,12 @@ plt.show()
 
 import pytesseract
 
-img = gray
-print("gray ocr")
+img = thresh
+print("binary ocr\n")
 print(pytesseract.image_to_string(img))
 
 img = noise
-print("\n\nnoise reoved ocr")
+print("\n\nnoise removed ocr\n")
 print(pytesseract.image_to_string(img))
 
 

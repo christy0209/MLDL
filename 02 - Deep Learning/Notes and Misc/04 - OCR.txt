@@ -1,0 +1,27 @@
+OCR - Optical Character Recognition
+
+Optical character recognition or optical character reader is the electronic or mechanical conversion of images of typed, handwritten or printed text into machine-encoded text, whether from a scanned document, a photo of a document, a scene-photo or from subtitle text superimposed on an image.
+
+How OCR works?
+
+Tessearact - Tesseract is an optical character recognition engine for various operating systems. It is free software, released under the Apache License.Originally developed by Hewlett-Packard as proprietary software in the 1980s, it was released as open source in 2005 and development has been sponsored by Google since 2006.
+In 2006, Tesseract was considered one of the most accurate open-source OCR engines then available.
+
+other solutions - 
+Azure OCR
+AWS Textract
+Google Cloud Vision
+ABBYY FineReader / FelxiCapture (very costly)
+
+Dependencies - 
+tesseract-ocr (ocr engine)
+pyteeseract (python package)
+
+
+Challenges in OCR
+mismapping - (0,O), (1,I,i,l) ,(g,q,9), (3,z)
+Training limitation - difficulty in collecting the data
+Images blur, skew, noise
+
+
+
