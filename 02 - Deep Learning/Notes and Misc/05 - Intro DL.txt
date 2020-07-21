@@ -1,0 +1,44 @@
+Introduction to Deep Learning
+
+Deep learning is a subset of machine learning. Machine learning is a subset of artificial intelligence. 
+Said another way — all deep learning algorithms are machine learning algorithms, but many machine learning algorithms do not use deep learning.
+
+Deep learning refers specifically to a class of algorithm called a neural network, 
+and technically only to “deep” neural networks (more on that in a second). 
+This first neural network was invented in 1949, but back then they weren’t very useful. 
+In fact, from the 1970’s to the 2010’s traditional forms of AI would consistently outperform neural network based models.
+
+
+A deep neural network consists of a hierarchy of layers, whereby each layer
+transforms the input data into more abstract representations (e.g. edge ->
+nose -> face). The output layer combines those features to make predictions.
+
+Learns by generating an error signal that measures the difference between the
+predictions of the network and the desired values and then using this error signal
+to change the weights (or parameters) so that predictions get more accurate.
+
+
+X1	X2	b1	y
+1	0	1	1
+
+
+H1 - sigmoid(b1w0+X1w1+X2w3) = sigmoid(0.5+.1+0) = sigmoid(0.6)
+H2 - sigmoid(b1w0+X1w2+X2w4) = sigmoid(0.5+.2+0) = sigmoid(0.7)
+
+O1 -sigmoid(b2w0+H1w5+H2w6)
+O1 -sigmoid(b2w0+H1w7+H2w8) 
+
+w0 = 0.5
+w1 = 0.1
+w2 = 0.2
+w3 = 0.3
+w4 = 0.4
+w5 = 0.5
+w6 = 0.6
+w7 = 0.7
+w8 = 0.8
+
+
+https://www.anotsorandomwalk.com/backpropagation-example-with-numbers-step-by-step/
+
+

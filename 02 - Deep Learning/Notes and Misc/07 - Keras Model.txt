@@ -1,0 +1,17 @@
+Keras is a simple tool for constructing a neural network. It is a high-level framework based on tensorflow, theano or cntk backends.
+
+
+Sequential specifies to keras that we are creating model sequentially and the output of each layer we add is input to the next layer we specify.
+
+model.add is used to add a layer to our neural network. We need to specify as an argument what type of layer we want. The Dense is used to specify the fully connected layer. The arguments of Dense are output dimension which is 16 in the first case, input dimension which is 20 for input dimension and the activation function to be used which is relu in this case. The second layer is similar, we dont need to specify input dimension as we have defined the model to be sequential so keras will automatically consider input dimension to be same as the output of last layer i.e 16. In the third layer(output layer) the output dimension is 4(number of classes). Now as we have discussed earlier, the output layer takes different activation functions and for the case of multiclass classification, it is softmax.
+
+Now we need to specify the loss function and the optimizer. It is done using compile function in keras.
+
+Here we need to specify the input data-> X_train, labels-> y_train, number of epochs(iterations), and batch size. 
+It returns the history of model training. History consists of model accuracy and losses after each epoch. We will visualize it later.
+Usually, the dataset is very big and we cannot fit complete data at once so we use batch size. 
+This divides our data into batches each of size equal to batch_size. 
+Now only this number of samples will be loaded into memory and processed. 
+Once we are done with one batch it is flushed from memory and the next batch will be processed.
+
+
