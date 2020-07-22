@@ -4,6 +4,11 @@ The pre-processing required in a ConvNet is much lower as compared to other clas
 While in primitive methods filters are hand-engineered, with enough training, 
 ConvNets have the ability to learn these filters/characteristics.
 
+
+convolution is a mathematical operation on two functions (f and g) that produces a third function expressing 
+how the shape of one is modified by the other
+
+
 Why ConvNets over Feed-Forward Neural Nets?
 
 An image is nothing but a matrix of pixel values, right? 
@@ -15,4 +20,81 @@ of weights. In other words, the network can be trained to understand the sophist
 
 The role of the ConvNet is to reduce the images into a form which is easier to process, 
 without losing features which are critical for getting a good prediction
+
+The objective of the Convolution Operation is to extract the high-level features such as edges, from the input image. 
+
+There are two types of results to the operation — 
+one in which the convolved feature is reduced in dimensionality as compared to the input, 
+and the other in which the dimensionality is either increased or remains the same. 
+This is done by applying Valid Padding in case of the former, or Same Padding in the case of the latter.
+
+
+
+Convolution
+
+Nout = [(Nin+2p-k)/s] + 1
+
+p - padding
+s - stride
+k - kernal
+
+Valid Padding - output has lower dim
+p -0
+s -1
+k -3
+Nin -5
+
+Nout = 2+1 = 3
+
+Same Padding  - Output has same dim
+p =1
+s =1
+k =3
+Nin =5
+Nout = (5+2-3)+1 = 5
+
+Same Padding - output has higher dim
+p =2
+s =1
+k =3
+Nin =5
+Nout = (5+2*2-3)+1 = 7
+
+Pooling Layer
+This is to decrease the computational power required to process the data through dimensionality reduction.
+Furthermore, it is useful for extracting dominant features which are rotational and positional invariant, 
+thus maintaining the process of effectively training of the model.
+
+There are two types of Pooling: Max Pooling and Average Pooling. 
+Max Pooling returns the maximum value from the portion of the image covered by the Kernel. 
+On the other hand, Average Pooling returns the average of all the values from the portion of the image covered by the Kernel.
+
+The Convolutional Layer and the Pooling Layer, together form the i-th layer of a Convolutional Neural Network. 
+Depending on the complexities in the images, the number of such layers may be increased for capturing low-levels details even further, 
+but at the cost of more computational power.
+
+
+Classification — Fully Connected Layer (FC Layer)
+
+Adding a Fully-Connected layer is a (usually) cheap way of learning non-linear combinations of the high-level features 
+as represented by the output of the convolutional layer. 
+The Fully-Connected layer is learning a possibly non-linear function in that space.
+
+
+Now that we have converted our input image into a suitable form for our Multi-Level Perceptron, 
+we shall flatten the image into a column vector. The flattened output is fed to a feed-forward neural network and backpropagation 
+applied to every iteration of training. 
+Over a series of epochs, the model is able to distinguish between dominating and certain low-level features in images and 
+classify them using the Softmax Classification technique.
+
+There are various architectures of CNNs available which have been key in building algorithms which power and shall power AI 
+as a whole in the foreseeable future. Some of them have been listed below
+
+1.AlexNet
+2.VGGNet
+3.GoogLeNet
+4.ResNet
+5.LeNet
+6.ZFNet
+
 
