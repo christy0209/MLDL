@@ -1,0 +1,36 @@
+Transfer learning (TL) is a research problem in machine learning (ML) that focuses on storing knowledge gained while solving 
+one problem and applying it to a different but related problem.
+For example, knowledge gained while learning to recognize cars could apply when trying to recognize trucks.
+
+During the process of transfer learning, the following three important questions must be answered:
+
+What to transfer: This is the first and the most important step in the whole process. 
+We try to seek answers about which part of the knowledge can be transferred from the source 
+to the target in order to improve the performance of the target task. When trying to answer this question, 
+we try to identify which portion of knowledge is source-specific and what is common between the source and the target.
+
+
+When to transfer: There can be scenarios where transferring knowledge for the sake of it may make matters worse 
+than improving anything (also known as negative transfer). We should aim at utilizing transfer learning to improve 
+target task performance/results and not degrade them. We need to be careful about when to transfer and when not to.
+
+
+How to transfer: Once the what and when have been answered, 
+we can proceed towards identifying ways of actually transferring the knowledge across domains/tasks. 
+This involves changes to existing algorithms and different techniques.
+
+
+Type of TF :-
+
+Inductive Transfer learning: In this scenario, the source and target domains are the same, 
+yet the source and target tasks are different from each other.
+
+Transductive Transfer Learning: In this scenario, there are similarities between the source and target tasks, 
+but the corresponding domains are different
+
+Unsupervised Transfer Learning: This setting is similar to inductive transfer itself, 
+with a focus on unsupervised tasks in the target domain.
+
+
+
+
