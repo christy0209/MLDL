@@ -15,6 +15,7 @@ Word2Vec is a statistical method for efficiently learning a standalone word embe
 It was developed by Tomas Mikolov, et al. at Google in 2013
 
 3. GloVe
+
 The Global Vectors for Word Representation, 
 or GloVe, algorithm is an extension to the word2vec method for efficiently learning word vectors, developed by Pennington, et al. at Stanford.
 
