@@ -1,0 +1,21 @@
+Word embeddings are a type of word representation that allows words with similar meaning to have a similar representation.
+They are a distributed representation for text that is perhaps one of the key breakthroughs for the impressive performance of 
+deep learning methods on challenging natural language processing problems.
+
+Word Embedding Algorithms
+Word embedding methods learn a real-valued vector representation for a predefined fixed sized vocabulary from a corpus of text.
+1. Embedding Layer (Tensorflow)
+It requires that document text be cleaned and prepared such that each word is one-hot encoded. 
+The size of the vector space is specified as part of the model, such as 50, 100, or 300 dimensions. 
+The vectors are initialized with small random numbers. 
+The embedding layer is used on the front end of a neural network and is fit in a supervised way using the Backpropagation algorithm.
+
+2. Word2Vec
+Word2Vec is a statistical method for efficiently learning a standalone word embedding from a text corpus.
+It was developed by Tomas Mikolov, et al. at Google in 2013
+
+3. GloVe
+The Global Vectors for Word Representation, 
+or GloVe, algorithm is an extension to the word2vec method for efficiently learning word vectors, developed by Pennington, et al. at Stanford.
+
+

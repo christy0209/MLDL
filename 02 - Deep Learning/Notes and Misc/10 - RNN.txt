@@ -1,0 +1,62 @@
+Why do we need RNN?
+There is a very specific use case where RNNs are required. 
+In order to explain RNNs you need to first understand something called a sequence.
+
+Sequence is a stream of data (finite or infinite) which are interdependent. 
+Examples would be time series data, informative pieces of strings, conversations etc. 
+In a conversation a sentence means something but the entire flow of the conversation mostly means something completely different. 
+Also in a time series data like stock market data, a single tick data means the current price, 
+but a full days data will show movement and allow us to take decision whether to buy or sell.
+
+CNNs don’t have any sort of correlation between previous input to the next input.
+
+Imagine a scenario like sentence generation or text translation. All the words generated are dependent on the words generated before
+
+RNNs have in them a sense some memory about what happened earlier in the sequence of data. This helps the system to gain context.
+
+Where to use a RNN?
+1. Language Modelling and Generating Text
+2. Machine Translation
+3. Speech Recognition
+4. Generating Image Descriptions
+5. Video Tagging
+6. Time Series Analysis
+
+
+Recurrent Networks
+
+We will provide input to the hidden layer at each step. 
+A recurrent neuron now stores all the previous step input and merges that information with the current step input.
+
+The decision at a time step t-1 affects the decision taken at time t
+
+RNN have a “memory” which remembers all information about what has been calculated. 
+It uses the same parameters for each input as it performs the same task on all the inputs or hidden layers to produce the output. 
+This reduces the complexity of parameters, unlike other neural networks.
+
+
+Formula for calculating current state
+
+Ht = f(Ht-1,Xt)
+
+
+Formula for applying activation function(tanh)
+Ht = tanh(Whh*Ht-1 + Wxh*Xt)
+
+ht -> current state
+ht-1 -> previous state
+xt -> input state
+whh -> weight at recurrent neuron
+wxh -> weight at input neuron
+
+Advantages of Recurrent Neural Network
+
+1.An RNN remembers each and every information through time. 
+It is useful in time series prediction only because of the feature to remember previous inputs as well. 
+This is called Long Short Term Memory.
+2.Recurrent neural network are even used with convolutional layers to extend the effective pixel neighborhood.
+
+Disadvantages of Recurrent Neural Network
+1.Gradient vanishing and exploding problems.
+2.Training an RNN is a very difficult task.
+3.It cannot process very long sequences if using tanh or relu as an activation function.
