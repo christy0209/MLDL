@@ -23,6 +23,16 @@ Machine Learning
  * 09 - Naive Bayes
  * 10 - ML Pipelines
  
+ 
+Deep Learning
+------------
+ * 01 - Neural Networks/Back Propagation
+ * 02 - CNN
+ * 03 - Transfer Learning
+ * 04 - RNN
+ * 05 - OpenCV
+ * 06 - OCR
+ 
 MAINTAINERS
 -----------
 
