@@ -1,0 +1,30 @@
+Chatbots
+A chatbot is a software application used to conduct an on-line chat conversation via text or text-to-speech, 
+in lieu of providing direct contact with a live human agent.
+
+Application of Chatbots
+
+1.Customer Service (Website,Whatsapp,messenger,skype)
+
+Advantages : 
+Accessible anytime
+Handling Capacity
+Flexible attribute
+Customer Satisfaction
+Cost Effective
+Faster Onboarding
+Work Automation
+Personal Assistant
+
+
+BotFrameworks
+
+Microsoft Bot Framework (Python API) 
+wit.ai (Python SDK is available)
+Dialogflow (Python API)
+IBM Watson
+RASA Stack
+ChatterBot
+
+
+ChatterBot (https://chatterbot.readthedocs.io/)

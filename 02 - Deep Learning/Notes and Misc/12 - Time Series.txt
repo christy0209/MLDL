@@ -1,0 +1,42 @@
+Time Series Analysis
+
+Time series is a sequence of observations recorded at regular time intervals.
+
+Depending on the frequency of observations, a time series may typically be hourly, daily, weekly, monthly, quarterly and annual. 
+Sometimes, you might have seconds and minute-wise time series as well, like, number of clicks and user visits every minute etc.
+
+Time series analysis involves understanding various aspects about the inherent nature of the series so that you are better informed 
+to create meaningful and accurate forecasts.
+
+
+What is panel data?
+
+The difference is that, in addition to time series, it also contains one or more related variables that are measured for the same time periods.
+Typically, the columns present in panel data contain explanatory variables that can be helpful in predicting the Y, 
+provided those columns will be available at the future forecasting period.
+
+Any time series may be split into the following components: Base Level + Trend + Seasonality + Residue
+
+A trend is observed when there is an increasing or decreasing slope observed in the time series. 
+Whereas seasonality is observed when there is a distinct repeated pattern observed between regular intervals due to seasonal factors. 
+It could be because of the month of the year, the day of the month, weekdays or even time of the day.
+
+So, a time series may be imagined as a combination of the trend, seasonality and the error terms.
+
+Additive and multiplicative time series?
+
+Depending on the nature of the trend and seasonality, a time series can be modeled as an additive or multiplicative, 
+wherein, each observation in the series can be expressed as either a sum or a product of the components:
+
+Additive time series:
+Value = Base Level + Trend + Seasonality + Error
+
+Multiplicative Time Series:
+Value = Base Level x Trend x Seasonality x Error
+
+
+
+
+
+
+
